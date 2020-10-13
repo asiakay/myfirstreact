@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const myfirstelement = <h1>Hello React!</h1>
+const myelement = (
+<ul>
+  <li>Apples</li>
+  <li>Bananas</li>
+  <li>Cherries</li>
+</ul>
+);
 
-ReactDOM.render(myfirstelement, document.getElementById('root'));
-
+ReactDOM.render(myelement, document.getElementById('root'));
 
 
 
@@ -13,3 +18,4 @@ ReactDOM.render(myfirstelement, document.getElementById('root'));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 // serviceWorker.unregister();
+
