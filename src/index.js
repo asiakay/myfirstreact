@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const myelement = (
-<div>
-  <h1>I am a Header.</h1>
-  <h1>I am a Header too.</h1>
-</div>
-);
+class Car extends React.Component {
+  render() {
+    return <h2>Hi, I am a car!</h2>;
+  }
+}
 
-ReactDOM.render(myelement, document.getElementById('root'));
+ReactDOM.render(<Car />, document.getElementById('root'));
 
 
 
