@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Football from './App.js';
+import Car from './App.js';
+// import './App.css';
 
-ReactDOM.render(<Football/>, document.getElementById('root'));
+ReactDOM.render(<Car/>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

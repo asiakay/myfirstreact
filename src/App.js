@@ -1,74 +1,73 @@
-import { render } from '@testing-library/react';
+// Create a new file called "mystyle.module.css" 
+// and insert some CSS code in it:
+// Import the stylesheet in your component then 
+// import the component in the application @ index.js
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import styles from './mystyle.module.css';
+
+class Car extends React.Component {
+  render (){
+    return <h1 className={styles.bigblue}>Hello Car!</h1>;
+  }
+}
+
+
+export default Car;
+
+/* // Create a style object named mystyle: 
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// React Event Object 
-
-/* 
-Arrow Function: Sending the event object manually:
-*/
-class Football extends React.Component {
-  shoot = (a,b) => {
-    alert(b.type);
-    /* 
-    'b' represents the React event that triggered the function, 
-    in this case the 'click' event 
-    */
-  }
-  render() {
+class MyHeader extends React.Component {
+  render(){
+    const mystyle = {
+      color: "white",
+      backgroundColor: "DodgerBlue",
+      padding: "10px",
+      fontFamily: "Arial"
+    };
     return (
-      <button onClick={(ev) => this.shoot("Goal", ev)}>Take the shot!!</button>
+      <div>
+        <h1 style={mystyle}>Hello Style!</h1>
+        <p>Add a little style!</p>
+      </div>
     );
   }
 }
-
-/* 
-Sending "Goal" as a parameter to the shoot function,
-using an anonymous arrow function.
-
-class Football extends React.Component {
-shoot = (a) => {
-  alert(a);
-}
-render() {
-  return (
-    <button onClick={() => this.shoot("Goal")}>Take the shot!</button>  
-    );
-  }
-} */
-
-/* // Sending "Goal" as a parameter to the shoot function by 
-// binding the event handler to 'this'
-class Football extends React.Component {
-  shoot(a) {
-    alert(a); 
-  }
-  render() {
-    return (
-      <button onClick={this.shoot.bind(this, "Goal")}>Take the shot!</button>
-    );
-  }
-} */
-
-
-/* {
-    constructor(props) {
-    super(props)
-    this.shoot = this.shoot.bind(this)
-  } */
-
-/*   shoot () {
-    alert(this); */
-    /* The 'this' keyword refers to the component object 
-    Thanks to the binding in the constructor function, 
-    the 'this' keyword now refers to the component object */
-/*   }
-  render() {
-    return (
-      <button onClick={this.shoot}>Take the shot!</button>
-    );
-  }
-}
+export default MyHeader;
  */
-  
-export default Football;
+
+/* // Use backgroundColor instead of background-color:
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class MyHeader extends React.Component {
+  render(){
+    return (
+      <div>
+        <h1 style={{backgroundColor: "lightblue"}}>Hello Style!</h1>
+        <p>Add a little style!</p>
+      </div>
+    );
+  }
+}
+export default MyHeader; */
+
+/* //Inserting an object with the styling information:
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class MyHeader extends React.Component {
+  render(){
+    return (
+      <div>
+        <h1 style={{color: "red"}}>Hello Style!</h1>
+        <p>Add a little style!</p>
+      </div>
+    );
+  }
+}
+  export default MyHeader; */
